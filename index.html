@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouve-couleurs</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+</head>
+<body onload="initialiserPartie()">
+    <div class="container">
+        <canvas id="monCanvas1" width="1000" height="100" style="border: 3px solid darkred;"></canvas><br><br>
+        <span id="message"></span>
+        <div class="gameSection">
+            <div class="infoJeu">
+                <label id="infoJeu">RÈGLES DU JEU :
+                    <br>-Deviner correctement la combinaison de couleurs mystères.<br>
+                                    -Cliquer sur les jetons pour changer leurs couleurs.<br>-Appuyer sur vérifier pour confirmer               
+                                    votre combinaison.<br>+5 points pour bonne combinaison.<br> BON JEU!</label>
+            </div>
+            <div class="tokensSection">
+                <div class="tokensGame">
+                    <div class="tokenMystere" id="token1"></div>
+                    <div class="tokenMystere" id="token2"></div>
+                    <div class="tokenMystere" id="token3"></div>
+                </div>
+                <hr class="separator" />
+                <div class="tokensPlayer">
+                    <div onclick="alternerCouleurToken(this)" class="tokenJoueur" id="token4"></div>
+                    <div onclick="alternerCouleurToken(this)" class="tokenJoueur" id="token5"></div>
+                    <div onclick="alternerCouleurToken(this)" class="tokenJoueur" id="token6"></div>
+                </div>
+            </div>
+            <div class="infoSection">
+                <label id="jetonCorrect">Correcte :</label>
+                <label id="affichageJetonCorrect"></label><br><br>
+                <label id="viesRestantes">Vies :</label>
+                <label id="affichageViesRestantes"></label><br><br>
+                <label id="pointage">Points :</label>
+                <label id="affichagePoints"></label>
+                <br>
+                <button onclick="verifierJeton()" id="btnVerifier">Vérifier</button>
+                <button onclick="nouvellePartie()" id="btnNouvellePartie">Nouvelle Partie</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="SCRIPT/script.js"></script> 
+</body>
+</html>
